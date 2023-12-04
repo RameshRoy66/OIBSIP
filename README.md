@@ -1,5 +1,5 @@
 # OIBSIP
-Task 1: Landing Page
+TASK-1:LANDING PAGE
 Overview:
 Welcome to the landing page task! This task involves creating a captivating and user-friendly landing page. The landing page serves as the gateway to our project, setting the tone and engaging users from the moment they arrive.
 
@@ -15,8 +15,7 @@ Overcoming challenges related to design decisions and ensuring compatibility wit
 Links:https://shopping-site-roy.netlify.app/
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Task 2: Personal Portfolio
+TASK-2:PERSONAL-PORTFOLIO
 Overview:
 Dive into the realm of personal branding with the personal portfolio task! Crafting a compelling portfolio is an art, and this task demonstrates my skills in web development, design, and storytelling.
 
@@ -29,11 +28,10 @@ Explore the portfolio to get a comprehensive view of my professional journey. Th
 Challenges:
 Addressing challenges related to content curation, design choices, and maintaining a balance between creativity and professionalism was crucial in completing this task.
 
-Links:
-Task 2 Code
-Task 2 Portfolio
+Links:https://ramesh-roy-portfolio.netlify.app/
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Task 3: Temperature Converter App
+TASK-3:TEMPERATURE-CALCULATOR-APP
 Overview:
 Step into the world of practical application development with the temperature converter app task! This task involved creating a user-friendly application for converting temperatures between different units.
 
