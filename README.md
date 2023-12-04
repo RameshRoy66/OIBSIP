@@ -50,6 +50,5 @@ The temperature converter app provides a seamless and efficient solution for tem
 Challenges:
 Overcoming challenges related to user input validation and ensuring accurate conversions were pivotal in delivering a reliable temperature converter.
 
-Links:
-Task 3 Code
-Task 3 App
+Links:https://temperature-calculator-appp.netlify.app/
+
