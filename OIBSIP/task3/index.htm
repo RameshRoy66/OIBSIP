@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Temperature Converter</title>
+</head>
+<body>
+<div class="temp">
+    <h2>Temperature Converter</h2>
+
+    <label for="temperature">Temperature:</label>
+    <input  type="text" id="temperature" placeholder="Enter temperature" oninput="validateInput()">
+
+
+    <label class="unit" for="unit"><b>Unit:</b></label>
+    <select id="unit">
+        <option  value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="kelvin">Kelvin</option>
+    </select>
+
+    <br>
+
+    <button class="glow-on-hover" onclick="convertTemperature()">Convert</button>
+
+    <br>
+
+    <p class="label" id="result"></p>
+</div>
+    <script>
+        function validateInput() {
+            var input = document.getElementById("temperature").value;
+            if (isNaN(input)) {
+                alert("Please enter a valid number for temperature.");
+                document.getElementById("temperature").value = "";
+            }
+        }
+
+        function convertTemperature() {
+            var temperature = parseFloat(document.getElementById("temperature").value);
+            var unit = document.getElementById("unit").value;
+            var resultElement = document.getElementById("result");
+
+            if (isNaN(temperature)) {
+                alert("Please enter a valid number for temperature.");
+                document.getElementById("temperature").value = "";
+                resultElement.innerHTML = "";
+                return;
+            }
+
+            if (unit === "celsius") {
+                // Convert to Fahrenheit and Kelvin
+                var fahrenheit = (temperature * 9/5) + 32;
+                var kelvin = temperature + 273.15;
+                resultElement.innerHTML = `Converted Temperature: ${fahrenheit.toFixed(2)} °F / ${kelvin.toFixed(2)} K`;
+            } else if (unit === "fahrenheit") {
+                // Convert to Celsius and Kelvin
+                var celsius = (temperature - 32) * 5/9;
+                var kelvin = (temperature - 32) * 5/9 + 273.15;
+                resultElement.innerHTML = `Converted Temperature: ${celsius.toFixed(2)} °C / ${kelvin.toFixed(2)} K`;
+            } else if (unit === "kelvin") {
+                // Convert to Celsius and Fahrenheit
+                var celsius = temperature - 273.15;
+                var fahrenheit = (temperature - 273.15) * 9/5 + 32;
+                resultElement.innerHTML = `Converted Temperature: ${celsius.toFixed(2)} °C / ${fahrenheit.toFixed(2)} °F`;
+            }
+        }
+    </script>
+
+</body>
+</html>
