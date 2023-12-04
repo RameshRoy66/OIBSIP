@@ -170,22 +170,6 @@ input, select{
 }
 
 
-/* button {
-    background-color: #4CAF50;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius:50px;
-    border: none;
-}
-
-button:hover {
-    background-color:;
-} */
-
 p {
     font-size: 18px;
     color: #333;
