@@ -1,0 +1,192 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0; /* Resetting margin to 0 */
+    padding: 5%; /* Resetting padding to 0 */
+    overflow: hidden; /* Prevents scrolling on the body */
+    background-color: #f4f4f4;
+    background: url('https://wallpaperaccess.com/full/3518786.jpg') center/cover no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+#temperature,#unit,option{
+    border-radius: 50px;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    transition: box-shadow 0.3s ease; /* Add a smooth transition effect */
+}
+#temperature:hover,#unit:hover,option:hover{
+
+    box-shadow:0 0 10px 5px #ff0000,
+    0 0 5px 5px #ff7300,
+    0 0 5px 5px #fffb00,
+    0 0 5px 5px #48ff00,
+    0 0 5px 5px #00ffd5,
+    0 0 5px 5px #002bff,
+    0 0 7px 5px #7a00ff,
+    0 0 8px 5px #ff00c8,
+    0 0 9px 5px #ff0000;
+}
+
+.temp {
+    width: 50%;
+    background-image:url('https://wallpaperaccess.com/full/3519277.jpg');
+    background-size: cover;
+    border-radius: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    overflow: hidden; /* Prevents scrolling */
+} /* Add styles for the h2 element */
+h2 {
+background: linear-gradient(45deg, #b30000, #b36600, #b3b300, #3db300, #00b38e, #0047b3, #5900b3, #b3008e, #b30000);
+-webkit-background-clip: text;
+  color: transparent; /* Make text transparent to show the gradient background */
+  animation: rainbow-text 5s linear infinite; /* Add animation to make it continuous */
+}
+
+/* Add keyframes for the animation */
+@keyframes rainbow-text {
+0% { background-position: 0% 50%; }
+100% { background-position: 100% 50%; }
+}
+
+label {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 5px;
+    background: linear-gradient(45deg, #b30000, #b36600, #b3b300, #3db300, #00b38e, #0047b3, #5900b3, #b3008e, #b30000);
+    -webkit-background-clip: text;
+    color: transparent; /* Make text transparent to show the gradient background */
+    animation: rainbow-text 5s linear infinite; /* Add animation to make it continuous */
+}
+.unit{
+    color:#080910;
+}
+.label {
+    font-size: 20px;
+    text-align: center;
+    background: linear-gradient(45deg, #3498db, #e74c3c, #f39c12, #2ecc71, #9b59b6, #3498db);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: amazing-text 3s ease-in-out infinite, color-change 6s ease-in-out infinite, background-change 10s linear infinite;
+}
+
+  /* Keyframes for the text animation */
+@keyframes amazing-text {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+  /* Keyframes for the color change animation */
+@keyframes color-change {
+    0% { color: #3498db; }
+    25% { color: #e74c3c; }
+    50% { color: #f39c12; }
+    75% { color: #2ecc71; }
+    100% { color: #9b59b6; }
+}
+
+  /* Keyframes for the background change animation */
+@keyframes background-change {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+
+
+input, select{
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.glow-on-hover  {
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before{
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after{
+    background: transparent;
+}
+
+.glow-on-hover:hover:before{
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+/* button {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius:50px;
+    border: none;
+}
+
+button:hover {
+    background-color:;
+} */
+
+p {
+    font-size: 18px;
+    color: #333;
+}
